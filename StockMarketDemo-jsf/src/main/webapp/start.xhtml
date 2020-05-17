@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+      
+	<h:head>Start Page</h:head> 
+	<ui:composition>
+		<h:form>
+			<h:commandButton action="home" value="Return to Home" />
+			<h:commandButton
+				 value="Start Demo"
+				 action="#{startDemoButtonHandler.printIt}" /> 
+		</h:form>
+	</ui:composition>    
+</html>
