@@ -5,20 +5,26 @@
       xmlns:h="http://xmlns.jcp.org/jsf/html">
       
 <ui:composition template="/template.xhtml" >
-	<ui:define name="pageHeader">#{msg['form.pageTitle']}</ui:define>
-   	<ui:define name="body">
-   		<h:form id="item-form"> 	
-			<h:dataTable value="#{stockListBean.list}" var="item">
-				<h:column>
-					<f:facet name="header">Stock Ticker Symbol</f:facet>
-					<h:outputText value="#{item.name}" />
-				</h:column>
-				<h:column>
-					<f:facet name="header">Stock Price</f:facet>
-					<h:outputText value="#{item.price}" />
-				</h:column>
-			</h:dataTable>
+	<ui:define name="body">
+   		<h:form id="item-form"> 
+			<div>
+				<h:dataTable value="#{stockListBean.list}" var="item">
+					<h:column>
+						<f:facet name="header">Stock Ticker Symbol</f:facet>
+						<h:outputText value="#{item.name}" />
+					</h:column>
+					<h:column>
+						<f:facet name="header">Stock Price</f:facet>
+						<h:outputText value="#{item.price}" />
+					</h:column>
+				</h:dataTable>
+			</div>
+			<div>
+				<h:commandButton value="Clear"
+					id="clearButton"
+			 		action="#{buttonHandler.clearList}"/>
+			</div>
 		</h:form>
-		</ui:define>
+	</ui:define>
 </ui:composition>
 </html>

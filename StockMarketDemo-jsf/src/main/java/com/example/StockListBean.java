@@ -7,9 +7,8 @@ import javax.enterprise.context.SessionScoped;
 import javax.inject.Named;
 import java.io.Serializable;
 
-
-@SessionScoped
 @Named
+@SessionScoped
 public class StockListBean implements Serializable
 {
 	private static final long serialVersionUID = 1L;
