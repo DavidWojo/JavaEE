@@ -12,16 +12,14 @@ public class ButtonHandler implements Serializable
 	private static final long serialVersionUID = 1L;
 	
 	@Inject
-	private StockListBean stockListBean;
+	private StockIndex stockIndex;
 
 	public void printIt()
 	{
-		System.out.println("Event Handler");
 	}
 	
 	public void clearList()
 	{
-		this.stockListBean.getList().clear();
-		System.out.println("Clearing List");
+		this.stockIndex.getList().clear();
 	}
 }

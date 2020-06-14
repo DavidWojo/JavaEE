@@ -5,10 +5,10 @@ import javax.inject.Named;
 
 @Named
 @RequestScoped
-public class StockBean
+public class StockSymbol
 {
 	private String name;
-	private String price;
+	private double price;
 	
 	public String getName()
 	{
@@ -19,12 +19,12 @@ public class StockBean
 		this.name = name;
 	}
 	
-	public String getPrice()
+	public double getPrice()
 	{
 		return price;
 	}
 	
-	public void setPrice(String price)
+	public void setPrice(double price)
 	{
 		this.price = price;
 	}
